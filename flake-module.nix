@@ -95,7 +95,7 @@ in
                         if [ -z "$HOSTNAME" ]; then
                           target=$USER
                         else
-                          target=$HOSTNAME
+                          target=$USER@$HOSTNAME
                         fi
                         nix run \
                           .#homeConfigurations."\"''${target}\"".activationPackage \
